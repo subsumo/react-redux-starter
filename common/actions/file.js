@@ -1,3 +1,13 @@
+import CordovaPromiseFS as 'cordova-promise-fs';
+
+var fs = CordovaPromiseFS({
+  persistent: true, // or false
+  storageSize: 20*1024*1024, // storage size in bytes, default 20MB 
+  concurrency: 3 // how many concurrent uploads/downloads?
+  Promise: require('promiscuous') // Your favorite Promise/A+ library! 
+});
+
+export const REQUEST_FILE = 'REQUEST_FILE'
 export const REQUEST_FILE = 'REQUEST_FILE'
 export const RECEIVE_FILE = 'RECEIVE_POSTS'
 
